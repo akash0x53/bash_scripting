@@ -1,0 +1,43 @@
+lowercase, uppercase conversion (parameter substituion method)
+abc="AkAsh"
+First upper: ${abc^}
+All upper: ${abc^^}
+first lower: ${abc,}
+All lower: ${abc,,}
+----------------------------------
+mathematical expressions
+
+$((expression)) e.g $((10*2))
+$[expression]
+
+base converion
+$((base#binary_no)) e.g $((2#1011))
+---------------------------------
+
+checking read,write,executable file
+
+if [[ -x file_name ]]; then
+ do_statement
+--------------------------------
+infinite loop ( using colon)
+while :
+do
+.
+.
+done
+--------------------------------
+argument passing
+$1,$2,$3 ... represents agrument number1,2 and so on
+$# number of arguments passed
+$$ PID of script
+-------------------------------
+shell braces {}
+{a..z} a b c ...z
+cartesian product: echo {set1}:{set2}...{setn}
+-------------------------------
+sticky permission
+chmod +t file
+-------------------------------
+Miscellaneous env variables 
+$IFS, set space character, Internal Field Separator
+eg. IFS='\'; a="adb\sd" -> abd sd
